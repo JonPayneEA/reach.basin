@@ -1,0 +1,33 @@
+Package: reach.basin
+Title: Catchment Geometry and Gauge Weighting for Flood Forecast Modelling
+Version: 0.1.0
+Authors@R: person("Jonathan", "Payne",
+    email = "jonathan.payne@environment-agency.gov.uk",
+    role = c("aut", "cre"))
+Description: Provides catchment geometry, gauge weighting, and spatial analysis
+    tools for flood forecast model development. Part of the Flode ecosystem,
+    alongside reach.io and reach.hydro. Replaces the spatial functions
+    previously in mappER with a clean sf-native implementation that handles
+    multi-polygon shapefiles correctly and errors explicitly on degenerate
+    inputs rather than silently returning zero weights.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports:
+    sf (>= 1.0-0),
+    terra (>= 1.7-0)
+Suggests:
+    exactextractr (>= 0.9.0),
+    ggplot2 (>= 3.4.0),
+    gstat,
+    reach.io,
+    rstac,
+    testthat (>= 3.0.0),
+    whitebox,
+    knitr,
+    rmarkdown
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+URL: https://github.com/JonPayneEA/reach.basin
+BugReports: https://github.com/JonPayneEA/reach.basin/issues
